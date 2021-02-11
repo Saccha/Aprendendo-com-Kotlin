@@ -7,4 +7,10 @@ Para concatenar uma variável a uma String, os súmbolos ${} deveme ser inserido
 
 Examples*/
 
+fun main(){
+  val welcome = "Bem vindo(a)"
+  var name = "Usuário"
+  println("$welcome , ${name.capitalize()}")
+}
+
 
