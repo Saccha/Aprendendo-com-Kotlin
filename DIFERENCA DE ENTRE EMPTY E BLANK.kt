@@ -96,6 +96,48 @@ fun main(args: Array<String>) {
     // link with custom title
     println(markdownLink(title = "Kotlin Language", url = "https://kotlinlang.org")) // [Kotlin Language](https://kotlinlang.org)
 }
+    
+    
+/*ifEmpty
+Retorna este array se não estiver vazio ou o resultado da chamada da função defaultValue se o array estiver vazio.
+Example*/
+    
+import kotlin.test.*
+
+fun main(args: Array<String>) {
+    val emptyArray: Array<Any> = emptyArray()
+
+    val emptyOrNull: Array<Any>? = emptyArray.ifEmpty { null }
+    println(emptyOrNull) // null
+
+    val emptyOrDefault: Array<Any> = emptyArray.ifEmpty { arrayOf("default") }
+    println(emptyOrDefault.contentToString()) // [default]
+
+    val nonEmptyArray = arrayOf(1)
+    val sameArray = nonEmptyArray.ifEmpty { arrayOf(2) }
+    println("nonEmptyArray === sameArray is ${nonEmptyArray === sameArray}") // true
+}
+    
+    
+/*emptySet
+Retorna um conjunto somente leitura vazio. O conjunto retornado é serializável (JVM).
+Example*/
+
+import kotlin.test.*
+
+fun main(args: Array<String>) {
+    val set = setOf<String>()
+    println("set.isEmpty() is ${set.isEmpty()}") // true
+
+    // another way to create an empty set,
+    // type parameter is inferred from the expected type
+    val other: Set<Int> = emptySet()
+
+    // Empty sets are equal
+
+    println("set == other is ${set == other}") // true
+    println(set) // []
+}
 
 
 
