@@ -2,7 +2,7 @@
 Os operadores pode ser chamados tanto como expressão quanto como comando.O resultado será o mesmo
 A função de soma também funciona para concatenar Strings;
 */
-
+/*
 SOMA:
 expressão: a + b
 comando: a.plus(b)
@@ -29,3 +29,14 @@ comando: a.mod(b)
 atribuição: a %= b
 
 */
+/*examples*/
+
+fun main(){
+    val count =  10
+    var times = 9
+    times += count
+    println(times)
+    println(count.plus(times))
+}
+
+
