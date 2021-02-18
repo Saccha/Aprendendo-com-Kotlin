@@ -21,6 +21,18 @@ fun main(){
    }
 }
 
+/*Exemplo 3*/
+
+fun main(args: Array<String>){
+   val nota: Double = 8.3
+   if(nota >= 7.0){
+      pritln("Aprovado")
+   }else{
+      pritln("Reprovado")
+   }
+}
+
+
 
 
 
